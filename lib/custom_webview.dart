@@ -100,8 +100,10 @@ class _CustomWebViewState extends State<CustomWebView> {
 
         /// Open by PDFView if file is pdf and android device
         ? isLoading
-            ? const CircularProgressIndicator(
-                valueColor: AlwaysStoppedAnimation<Color>(Colors.blue),
+            ? const Center(
+                child: CircularProgressIndicator(
+                  valueColor: AlwaysStoppedAnimation<Color>(Colors.blue),
+                ),
               )
             : PDFView(
                 filePath: pFile.path,
