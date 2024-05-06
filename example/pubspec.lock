@@ -54,7 +54,7 @@ packages:
     description:
       path: "."
       ref: main
-      resolved-ref: cb4d8f846a97852abe6743d0559401ed6d9e1cf1
+      resolved-ref: "08fcf7927904c470530ec585c4a70637872d8305"
       url: "https://github.com/hlongho/custom_webview.git"
     source: git
     version: "0.0.1"

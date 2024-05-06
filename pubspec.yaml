@@ -1,7 +1,9 @@
 name: custom_webview
-description: A new Flutter package project.
+description: Custom webview to improve feature 
+  - Fix open link pdf in android device 
+  - Add list url and open default launcher
 version: 0.0.1
-homepage:
+homepage: https://github.com/hlongho/custom_webview.git
 
 environment:
   sdk: '>=3.1.3 <4.0.0'
