@@ -5,12 +5,17 @@ Custom webview to improve feature
 - Add list url and open default launcher
 
 ## Usage
+Add library to project
+```
+flutter pub add custom_webview
+```
+
 List url and open default launcher
 ```
-  List<String> urlLauncher = [
+List<String> urlLauncher = [
     'https://play.google.com',
     'https://apps.apple.com'
-  ];
+];
   
 ```
 Use widget
