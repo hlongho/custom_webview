@@ -10,8 +10,12 @@ import 'package:webview_flutter/webview_flutter.dart';
 import 'package:webview_flutter_wkwebview/webview_flutter_wkwebview.dart';
 
 class CustomWebView extends StatefulWidget {
+  /// Url view
   final String url;
+
+  /// List url open default launcher
   final List<String>? urlLauncher;
+
   const CustomWebView(this.url, {this.urlLauncher, super.key});
 
   @override
@@ -72,6 +76,7 @@ class _CustomWebViewState extends State<CustomWebView> {
         onNavigationRequest: (NavigationRequest request) {
           if (widget.urlLauncher != null) {
             for (var url in widget.urlLauncher!) {
+              /// open default launcher
               if (request.url.contains(url)) {
                 openURL(request.url);
                 return NavigationDecision.prevent;
@@ -92,6 +97,8 @@ class _CustomWebViewState extends State<CustomWebView> {
   @override
   Widget build(BuildContext context) {
     return isPDFAndroid
+
+        /// Open by PDFView if file is pdf and android device
         ? isLoading
             ? const CircularProgressIndicator(
                 valueColor: AlwaysStoppedAnimation<Color>(Colors.blue),
@@ -104,6 +111,7 @@ class _CustomWebViewState extends State<CustomWebView> {
         : WebViewWidget(controller: _controller);
   }
 
+  /// Open URL if contains in list
   Future<void> openURL(String url) async {
     Uri uri = Uri.parse(url);
     if (!await launchUrl(uri, mode: LaunchMode.externalApplication)) {
