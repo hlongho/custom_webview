@@ -30,6 +30,10 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
+  List<String> urlLauncher = [
+    'https://play.google.com',
+    'https://apps.apple.com'
+  ];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -39,7 +43,9 @@ class _MyHomePageState extends State<MyHomePage> {
         ),
         // body: CustomWebView('https://pub.dev/packages/flutter_pdfview'));
         body: CustomWebView(
-            'https://play.google.com/store/apps/details?id=omn1.namlonggroup.app'));
+          'https://play.google.com/store/apps/details?id=omn1.namlonggroup.app',
+          urlLauncher: urlLauncher,
+        ));
     // body: CustomWebView(
     //     'https://pub-e1c1c97ce246453790aed20554092539.r2.dev/ATTACHMENTS/a0G1e000005dbx6EAA/Tho%CC%82ng-bao-cap-nhat-phien-ba-1.0.4.pdf'));
     // body: CustomWebView(

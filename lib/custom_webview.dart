@@ -71,9 +71,11 @@ class _CustomWebViewState extends State<CustomWebView> {
       ..setNavigationDelegate(NavigationDelegate(
         onNavigationRequest: (NavigationRequest request) {
           if (widget.urlLauncher != null) {
-            if (widget.urlLauncher!.contains(request.url)) {
-              openURL(request.url);
-              return NavigationDecision.prevent;
+            for (var url in widget.urlLauncher!) {
+              if (request.url.contains(url)) {
+                openURL(request.url);
+                return NavigationDecision.prevent;
+              }
             }
           }
           return NavigationDecision.navigate;
