@@ -52,11 +52,10 @@ packages:
   custom_webview:
     dependency: "direct main"
     description:
-      path: "."
-      ref: main
-      resolved-ref: "08fcf7927904c470530ec585c4a70637872d8305"
-      url: "https://github.com/hlongho/custom_webview.git"
-    source: git
+      name: custom_webview
+      sha256: "652b5fd7e13fe9938ee3e13a4e1c8c870c7260357e7f76d622aa4e27360675ce"
+      url: "https://pub.dev"
+    source: hosted
     version: "0.0.1"
   fake_async:
     dependency: transitive
