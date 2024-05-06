@@ -1,3 +1,4 @@
+import 'package:custom_webview/custom_webview.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -36,6 +37,12 @@ class _MyHomePageState extends State<MyHomePage> {
           backgroundColor: Theme.of(context).colorScheme.inversePrimary,
           title: Text(widget.title),
         ),
-        body: Container());
+        // body: CustomWebView('https://pub.dev/packages/flutter_pdfview'));
+        body: CustomWebView(
+            'https://play.google.com/store/apps/details?id=omn1.namlonggroup.app'));
+    // body: CustomWebView(
+    //     'https://pub-e1c1c97ce246453790aed20554092539.r2.dev/ATTACHMENTS/a0G1e000005dbx6EAA/Tho%CC%82ng-bao-cap-nhat-phien-ba-1.0.4.pdf'));
+    // body: CustomWebView(
+    //     'https://nlg-dev-a42b48e63f03.herokuapp.com/notify-update-app'));
   }
 }
